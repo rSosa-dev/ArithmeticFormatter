@@ -18,7 +18,7 @@ def arithmetic_arranger(problems, showAnsw=False):
     p = problem.split() # The default split value is whitespace (' ').
     number.extend([p[0], p[2]]) # Add to numbers list the two operands.
 
-  """for n in number:
-    if isnumeric(n) == False:
-      arranged_problems = "Error. Numbers must only contain digits."
-      return arranged_problems"""
+  for n in number:
+    if str(n).isdigit() == False: # Check if every item in list 'number' is a number.
+      arranged_problems = "Error: Numbers must only contain digits."
+      return arranged_problems
