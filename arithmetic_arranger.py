@@ -8,20 +8,15 @@ def arithmetic_arranger(problems, showAnsw=False):
 
   # Check if all operators are '+' or '-'.
   operators = []
-  operators = list(map(lambda x: x.split()[1], problems))
-  if any(o in {'+', '-'} for o in operators):
-    arranged_problems = "Error: Operator must be '+' or '-'."
+  operators = list(map(lambda x: x.split()[1], problems)) # The default split value is whitespace (' '). Getting the operator here.
+  if set(operators) != {"+", "-"}: # Check if the operators are missed in the list.
+    arranged_problems = "Error: Operator must be '+' or '-'." # If so, the error is throwed.
     return arranged_problems
-  
-  """for o in operators:
-    if o != "+" or o != "-":
-      arranged_problems = "Error: Operator must be '+' or '-'."
-      return arranged_problems"""
 
   # Add all operands into a list.
   number = []
   for problem in problems:
-    p = problem.split() # The default split value is whitespace (' ').
+    p = problem.split()
     number.extend([p[0], p[2]]) # Add to numbers list the two operands.
 
   for n in number:
