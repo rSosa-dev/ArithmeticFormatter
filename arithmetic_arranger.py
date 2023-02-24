@@ -12,6 +12,10 @@ def arithmetic_arranger(problems, showAnsw=False):
   if set(operators) != {"+", "-"}: # Check if the operators are missed in the list.
     arranged_problems = "Error: Operator must be '+' or '-'." # If so, the error is throwed.
     return arranged_problems
+  
+  if len(set(operators)) > 5: # By getting the length of the list operators we can get the amount of problems.
+    arranged_problems = "Error: Too many problems."
+    return arranged_problems
 
   # Add all operands into a list.
   number = []
