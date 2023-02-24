@@ -7,10 +7,16 @@ def arithmetic_arranger(problems, showAnsw=False):
     return arranged_problems
 
   # Check if all operators are '+' or '-'.
-  operations = list(map(lambda x: x.split()[1], problems))
-  if set(operations) != {'+', '-'} and len(set(operations)) != 2:
+  operators = []
+  operators = list(map(lambda x: x.split()[1], problems))
+  if any(o in {'+', '-'} for o in operators):
     arranged_problems = "Error: Operator must be '+' or '-'."
     return arranged_problems
+  
+  """for o in operators:
+    if o != "+" or o != "-":
+      arranged_problems = "Error: Operator must be '+' or '-'."
+      return arranged_problems"""
 
   # Add all operands into a list.
   number = []
