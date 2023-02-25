@@ -19,16 +19,25 @@ def arithmetic_arranger(problems, showAnsw=False):
 
   # Add all operands into a list.
   # Handle max four digits per operands problem.
-  number = []
+  numbers = []
   for problem in problems:
     p = problem.split()
     if len(p[0]) > 4 or len(p[2]) > 4: # If one of the operands have more than 4 digits, the error is thrown.
       arranged_problems = "Error: Numbers cannot be more than four digits."
       return arranged_problems
     else:
-      number.extend([p[0], p[2]]) # Add to numbers list the two operands.
+      numbers.extend([p[0], p[2]]) # Add to numbers list the two operands.
 
-  for n in number:
+  for n in numbers:
     if str(n).isdigit() == False: # Check if every item in list 'number' is a number.
       arranged_problems = "Error: Numbers must only contain digits."
       return arranged_problems
+
+  for n in range (0, len(numbers)): # Printing the numbers of the list.
+
+    print(numbers[n])
+    print(numbers[n+1])
+
+
+
+    
