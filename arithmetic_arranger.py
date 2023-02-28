@@ -54,7 +54,7 @@ def arithmetic_arranger(problems, showAnsw=False):
       if i != len(numbers) - 1:
           bottomRow += ' ' * 4
 
-  if showAnsw:
+  if showAnsw == True:
       arranged_problems = '\n'.join((topRow, bottomRow, dashes, solutions)) # If showAnsw (bool) parameter is true, the answers will be shown.
   else:
       arranged_problems = '\n'.join((topRow, bottomRow, dashes)) # If not, the answers will be hiden.
