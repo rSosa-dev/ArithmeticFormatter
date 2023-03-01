@@ -39,7 +39,7 @@ def arithmetic_arranger(problems, showAnsw=False):
   for i in range(0, len(numbers), 2): # Step by 2 into the list.
       operationWidth = max(len(numbers[i]), len(numbers[i+1])) + 2 # We get the max length between the two operands, and we add two more lines counting the operator and the space.
       topRow += numbers[i].rjust(operationWidth) # The function rjust() aligns the text to the right.
-      dashes += '-' * operationWidth # We 
+      dashes += '-' * operationWidth
       solutions += str(values[i // 2]).rjust(operationWidth) # Calculate the results of the operations.
       if i != len(numbers) - 2:
           topRow += ' ' * 4
