@@ -1,4 +1,4 @@
-# ArithmeticFormatter
+# Arithmetic Formatter
 
 First project of freeCodeCamp's course "Scientific Computing with Python".
 
