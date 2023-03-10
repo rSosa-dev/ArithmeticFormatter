@@ -9,4 +9,4 @@ The instructions of how you have to do it are specified in the course.
 
 ## Creator's social media:
 + LinkedIn: https://www.linkedin.com/in/dev-rsosa/
-+ Twitter: https://twitter.com/_raulsosa_
++ Twitter: https://twitter.com/_raulsosa_ a
